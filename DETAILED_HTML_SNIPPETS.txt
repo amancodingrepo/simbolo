@@ -1,0 +1,582 @@
+DETAILED HTML SNIPPETS FOR EACH UNIQUE SECTION
+===============================================
+
+FILE BREAKDOWN AND SECTION COUNT:
+- index.html: 16 sections
+- about.html: 11 sections
+- service.html: 7-8 sections
+- work.html: 6-7 sections
+- blog-standard.html: 2 sections
+- contact.html: 3-4 sections
+- index-v2.html: 16 sections (identical to index.html)
+
+===========================================
+SECTION TYPE 1: HERO (appears in all files)
+===========================================
+
+BASIC STRUCTURE (from index.html):
+<div class="section-hero">
+    <div class="hero-image"></div>
+    <div class="container">
+        <div class="content-wrap text-center">
+            <div class="sub fw-semibold effectFade fadeUp">
+                [SVG ICON]
+                AI-Driven Agency
+            </div>
+            <div class="title text-display-2 effectFade fadeRotateX">
+                <span class="title1 fw-semibold text-gradient-1">Your AI Sprint Team</span>
+                <br>
+                <div class="title2 d-flex gap-20 justify-content-center flex-wrap">
+                    <span class="fw-semibold text-gradient-1">on Demand</span>
+                    <div class="title-icon">
+                        <div class="box"></div>
+                        <div class="title-icon-wrap">
+                            <img class="img-1 img-transform-3" src="assets/images/item/hero-1.svg" alt="">
+                            <img class="img-2 img-transform-3" src="assets/images/item/hero-2.svg" alt="">
+                            <img class="img-3 img-transform-3" src="assets/images/item/hero-3.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text effectFade fadeUp">Description text...</p>
+            <div class="bot-btns effectFade fadeRotateX">
+                <a href="service.html" class="tf-btn">Explore Services</a>
+                <a href="#pricing" class="tf-btn-2">View Pricing Plans</a>
+            </div>
+        </div>
+    </div>
+    <a href="#about" class="scroll-more">
+        <span class="fw-semibold link1">Scroll for more</span>
+        <i class="icon icon-long-arrow-alt-down-solid"></i>
+    </a>
+</div>
+
+VARIANT (from about.html - with v1 modifier):
+<div class="section-hero v1">
+    <div class="hero-image"></div>
+    <div class="container">
+        <div class="content-wrap text-center">
+            <div class="title text-display-2 effectFade fadeRotateX">
+                <span class="title1 fw-semibold text-gradient-1">Simbolo Empowering</span>
+                <br>
+                <div class="title2 d-flex gap-20 justify-content-center flex-wrap">
+                    <span class="fw-semibold text-gradient-1">Industries</span>
+                    [title-icon div structure same as above]
+                </div>
+            </div>
+            <p class="text effectFade fadeUp">[Description]</p>
+            <div class="bot-btns effectFade fadeRotateX">
+                <a href="contact.html" class="tf-btn">Get Started</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-hero [v1], text-center, text-display-2, text-gradient-1, effectFade
+- Animations: fadeRotateX, fadeUp, fadeZoom, fadeDown, fadeLeft, fadeRight
+- Images: img-transform-3 applied to images for animation
+- Child divs: hero-image (background), container, content-wrap, title-icon, box, title-icon-wrap
+- Buttons: tf-btn (primary), tf-btn-2 (secondary)
+- Scroll anchor: scroll-more link with arrow icon
+
+==================================================
+SECTION TYPE 2: ABOUT-US FLAT-SPACING
+==================================================
+
+STRUCTURE:
+<div class="section-about-us flat-spacing" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading-section">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">About Us</div>
+                    <div class="heading-title text-gradient-2 effectFade fadeRotateX">Human-Centered AI, <br> Built for Production</div>
+                </div>
+            </div>
+            <div class="col-xxl-7 col-lg-6 lg-mb-24">
+                <div class="col-left">
+                    <div class="position-relative z-5">
+                        <div class="sub text-white">
+                            <span class="dot"></span>
+                            Available for worldwide project
+                        </div>
+                        <h5 class="title fw-semibold text-white">Based in <span class="text-brand">Montréal, Canada</span></h5>
+                        <a href="contact.html" class="tf-btn">Start a Project</a>
+                    </div>
+                    <img class="effectFade fadeRotateX" src="assets/images/item/earth.png" alt="">
+                </div>
+            </div>
+            <div class="col-xxl-5 col-lg-6">
+                <div class="review-box mb-24">
+                    <div class="desc fw-semibold text-body-1">Trusted by 120+ clients across 4 industries - shipping AI from idea to production in 8–10 weeks</div>
+                    <div class="d-flex justify-content-between flex-wrap align-items-end gap-12">
+                        <div class="">
+                            <div class="d-flex gap-4 text mb-10">
+                                [Trustpilot SVG]
+                                Trustpilot
+                            </div>
+                            <div class="d-flex gap-2">
+                                [5x star SVGs]
+                            </div>
+                        </div>
+                        <div class="counter text-neutral-200">
+                            <span class="number" data-speed="1500" data-to="120" data-inviewport="yes">10</span><span>+</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-quotes effectFade fadeRotateX">
+                    <div class="image">
+                        <img src="assets/images/section/quotes-1.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="icon mb-8">
+                            [Quotes SVG icon]
+                        </div>
+                        <div class="text-body-1 fw-semibold desc">Good AI feels obvious—because the hard work is hidden.</div>
+                        <div class="cite">
+                            <div class="name text-body-3 fw-semibold">Ava Collins</div>
+                            <div class="line"></div>
+                            <div class="sub text-body-3">Simbolo's Design Lead</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- ID: about
+- Classes: section-about-us, flat-spacing, col-xxl-7, col-lg-6, col-xxl-5, col-lg-6
+- Data attributes: data-speed="1500", data-to="120", data-inviewport="yes"
+- Counter element: span.number with data attributes
+- Responsive spacing: lg-mb-24
+- Text utilities: text-white, text-brand, text-body-1, text-body-3, text-gradient-2
+- Typography: fw-semibold (font-weight semibold)
+
+===================================
+SECTION TYPE 3: PARTNER
+===================================
+
+STRUCTURE:
+<div class="section-partner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="partner-wrap">
+                    <p class="text-secondary text fw-semibold">Trusted by 100+ <br> top-tier brands</p>
+                    <div class="infiniteSlide_tech_main d-grid">
+                        <div class="infiniteSlide infiniteSlide_partner" data-clone="5">
+                            <img src="assets/images/partner/partner-1.svg" alt="">
+                            <img src="assets/images/partner/partner-2.svg" alt="">
+                            <img src="assets/images/partner/partner-3.svg" alt="">
+                            <img src="assets/images/partner/partner-4.svg" alt="">
+                            <img src="assets/images/partner/partner-5.svg" alt="">
+                            <img src="assets/images/partner/partner-6.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-partner, infiniteSlide_tech_main, d-grid, infiniteSlide, infiniteSlide_partner
+- Data attributes: data-clone="5" (controls infinite scroll duplication)
+- Purpose: Infinite horizontal scrolling logo carousel
+- Text utility: text-secondary, fw-semibold
+
+=====================================
+SECTION TYPE 4: SERVICES FLAT-SPACING
+=====================================
+
+STRUCTURE (simplified):
+<div id="services" class="section-services flat-spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading-section">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">What We Do</div>
+                    <div class="heading-title text-gradient-2 effectFade fadeRotateX">Full-Stack AI Solutions</div>
+                </div>
+            </div>
+            [Service cards with col-md-6, col-lg-4 classes]
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- ID: services
+- Classes: section-services, flat-spacing
+- Standard heading pattern: heading-section > heading-sub + heading-title
+- Card grid: responsive columns (md-6, lg-4)
+
+========================================
+SECTION TYPE 5: FEATURED-WORKS
+========================================
+
+<div id="works" class="section-featured-works flat-spacing pt-0">
+    <div class="container">
+        [Works grid with images and descriptions]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- ID: works
+- Classes: section-featured-works, flat-spacing, pt-0 (no top padding)
+- Purpose: Portfolio/case studies showcase
+
+=============================================
+SECTION TYPE 6: PROCESS FLAT-SPACING PT-0
+=============================================
+
+<div class="section-process flat-spacing pt-0">
+    <div class="container">
+        [Process steps 1-4 with icons and descriptions]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-process, flat-spacing, pt-0
+- Purpose: Linear process/methodology steps
+
+=============================================
+SECTION TYPE 7: BENEFITS FLAT-SPACING PT-0
+=============================================
+
+<div class="section-benefits flat-spacing pt-0">
+    <div class="container">
+        [Benefit cards grid layout]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-benefits, flat-spacing, pt-0
+- Purpose: Benefits/features list
+
+===========================================================
+SECTION TYPE 8: FEATURES FLAT-SPACING PT-0 (MULTI-CONTAINER)
+===========================================================
+
+<div class="section-features flat-spacing pt-0">
+    <div class="container z-5">
+        <div class="heading-section">
+            <div class="heading-sub fw-semibold effectFade fadeUp">Features</div>
+            <div class="heading-title text-gradient-2 effectFade fadeRotateX">Advanced Capabilities</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="side-line-wrap">
+            [Features with decorative side lines]
+        </div>
+    </div>
+    <div class="container">
+        <div class="features-wrap justify-content-between">
+            [Features grid with d-flex, justify-content-between]
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-features, flat-spacing, pt-0, z-5 (z-index positioning)
+- Multiple containers: heading, content with decorations, grid
+- Flex utilities: d-flex, justify-content-between
+
+==============================
+SECTION TYPE 9: TOOLS
+==============================
+
+<div class="section-tools flat-spacing">
+    <div class="container">
+        <div class="heading-section text-center">
+            [Tools/technologies list]
+        </div>
+    </div>
+</div>
+
+VARIANT (about.html):
+<div class="section-tools v2 flat-spacing">
+    <div class="tool-wrap text-center">
+        [Tool items]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-tools, flat-spacing, [v2 for variant]
+- Purpose: Technology/tools showcase
+- Text utilities: text-center
+
+========================================
+SECTION TYPE 10: TEAM FLAT-SPACING
+========================================
+
+<div class="section-team flat-spacing">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading-section text-center">
+                    <div class="heading-sub fw-semibold effectFade fadeUp">Our Team</div>
+                    <div class="heading-title text-gradient-2 effectFade fadeRotateX">Meet The Builders</div>
+                </div>
+            </div>
+            [Team member cards - col-md-6, col-lg-3, etc.]
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-team, flat-spacing
+- Card grid: responsive columns
+
+=========================================
+SECTION TYPE 11: STATISTIC (NO SPACING CLASS)
+=========================================
+
+<div class="section-statistic">
+    <div class="container">
+        [Statistics items with counter]
+        <span class="number" data-speed="1000" data-to="500" data-inviewport="yes">0</span>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-statistic
+- Data attributes: data-speed, data-to, data-inviewport
+- Purpose: Display key metrics/numbers with animated counters
+
+==========================================
+SECTION TYPE 12: AWARDS FLAT-SPACING
+==========================================
+
+<div class="section-awards flat-spacing">
+    <div class="container">
+        [Award/certification items grid]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-awards, flat-spacing
+
+=============================================
+SECTION TYPE 13: TESTIMONIALS FLAT-SPACING PT-0
+=============================================
+
+<div class="section-testimonials flat-spacing pt-0">
+    <div class="container">
+        [Client testimonial cards with slider]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-testimonials, flat-spacing, pt-0
+
+===============================
+SECTION TYPE 14: FAQS FLAT-SPACING
+===============================
+
+<div class="section-faqs flat-spacing">
+    <div class="container">
+        [FAQ accordion items]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-faqs, flat-spacing
+- Purpose: Accordion/collapsible FAQ items
+
+==================================================
+SECTION TYPE 15: PRICING FLAT-SPACING PT-0
+==================================================
+
+<div id="pricing" class="section-pricing flat-spacing pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="heading-section text-center">
+                    <div class="heading-sub fw-semibold">Flexible Pricing</div>
+                    <div class="heading-title text-gradient-2">Choose Your Plan</div>
+                </div>
+            </div>
+            [Pricing cards/tables]
+            <div class="d-flex align-items-center gap-24 flex-wrap">
+                [Pricing comparison options]
+            </div>
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- ID: pricing
+- Classes: section-pricing, flat-spacing, pt-0
+- Flex utilities: d-flex, align-items-center, gap-24
+
+===================================
+SECTION TYPE 16: CONTACT (ID-based)
+===================================
+
+<div id="contact" class="flat-spacing pt-0">
+    <div class="section-contact">
+        <div class="container">
+            [Contact form with inputs: name, email, message, etc.]
+        </div>
+    </div>
+</div>
+
+EXTENDED VERSION (in about.html):
+<div id="contact" class="flat-spacing">
+    <div class="section-contact p-0">
+        <div class="container">
+            [Contact form]
+        </div>
+    </div>
+</div>
+<div class="container">
+    [Contact info: phone, address, etc.]
+</div>
+<div class="container h-100">
+    [Map or additional footer content]
+</div>
+
+KEY ATTRIBUTES:
+- ID: contact
+- Classes: flat-spacing, section-contact, [pt-0, p-0 modifiers]
+- Multiple containers for form, info, and extended content
+
+==============================
+SECTION TYPE 17: DELAY FLAT-SPACING
+==============================
+
+(Unique to work.html)
+
+<div class="section-delay flat-spacing">
+    <div class="container">
+        <div class="delay-wrap">
+            [Work items with staggered animation]
+        </div>
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-delay, flat-spacing
+- Child: delay-wrap (for staggered animations)
+
+========================================
+SECTION TYPE 18: BLOG (section tag)
+========================================
+
+(In blog-standard.html)
+
+<section class="section-blog flat-spacing">
+    <div class="container">
+        [Blog posts in grid layout]
+    </div>
+</section>
+
+KEY ATTRIBUTES:
+- Uses <section> tag instead of <div>
+- Classes: section-blog, flat-spacing
+- Purpose: Blog posts listing
+
+==================================
+SECTION TYPE 19: PAGE-TITLE
+==================================
+
+<div class="section-page-title">
+    <div class="container text-center">
+        [Page title with breadcrumb/context]
+    </div>
+</div>
+
+KEY ATTRIBUTES:
+- Classes: section-page-title, text-center
+- Purpose: Page header/title section
+
+===========================================
+COMMON PATTERNS & UTILITIES
+===========================================
+
+SPACING CLASSES:
+- flat-spacing: Default section vertical spacing
+- pt-0: Remove top padding
+- p-0: Remove all padding
+- mb-24, mb-10: Margin bottom variants
+- lg-mb-24: Responsive margin (large breakpoint)
+
+GAP UTILITIES (Flexbox):
+- gap-2, gap-4, gap-12, gap-20, gap-24: Space between flex items
+
+RESPONSIVE GRID:
+- col-12: Full width
+- col-md-6: 50% on medium+
+- col-lg-3: 25% on large+
+- col-lg-4: 33.33% on large+
+- col-xxl-5: Custom breakpoint
+- col-xxl-7: Custom breakpoint
+
+FLEXBOX:
+- d-flex: Display flex
+- flex-wrap: Wrap items
+- justify-content-center: Center horizontally
+- justify-content-between: Space-between
+- align-items-center: Vertical center
+- align-items-end: Bottom align
+
+TEXT/TYPOGRAPHY:
+- fw-semibold: Font-weight 600
+- text-center: Text alignment center
+- text-display-2: Large display heading
+- text-body-1, text-body-3: Body text sizes
+- text-gradient-1, text-gradient-2: Gradient text effect
+- text-white: White text
+- text-brand: Brand color
+- text-secondary: Secondary text color
+- text-neutral-200: Neutral gray variant
+
+ANIMATION CLASSES:
+- effectFade: Base fade animation
+- fadeUp, fadeDown, fadeLeft, fadeRight: Directional variants
+- fadeRotateX, fadeRotateY: 3D rotation variants
+- fadeZoom: Zoom variant
+- img-transform-3: Applied to images for animation effects
+
+Z-INDEX:
+- z-5: Z-index positioning for layering
+
+==================================
+DATA ATTRIBUTES SUMMARY
+==================================
+
+data-clone="5":
+- Purpose: Controls infinite scroll carousel duplication
+- Used in: .infiniteSlide elements
+- Value: Number of clones to create
+
+data-speed="1500":
+- Purpose: Animation duration in milliseconds
+- Used in: .number elements (counters)
+- Value: Integer (e.g., 1000, 1500, 2000)
+
+data-to="120":
+- Purpose: Target value for counter animation
+- Used in: .number elements
+- Value: Integer (final count destination)
+
+data-inviewport="yes":
+- Purpose: Trigger animation when element enters viewport
+- Used in: .number elements
+- Value: "yes"
+
+==================================
+NEXT.JS MIGRATION RECOMMENDATIONS
+==================================
+
+Component structure should follow:
+- Create a components/sections/ directory
+- One component per section type
+- Pass content as props to maintain DRY
+- Use CSS modules or Tailwind for styling
+- Implement intersection observer for animations
+- Handle responsive grids with Tailwind or custom CSS
+- Replicate data-* attributes with props and useEffect hooks

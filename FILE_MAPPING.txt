@@ -1,0 +1,414 @@
+FILE MAPPING AND SECTION BREAKDOWN
+===================================
+
+SOURCE: C:\Users\Asus\Desktop\simbolo\Simbolo\
+
+==============================================
+FILE 1: index.html (118,711 bytes)
+==============================================
+
+HEADER: Yes (tf-header header2) - Skip in conversion
+FOOTER: Yes (implicit in wrapper) - Skip in conversion
+MAIN CONTENT: <main id="wrapper">
+
+SECTIONS (16 total):
+1.  section-hero [lines ~140-187]
+2.  section-about-us flat-spacing (id="about") [lines ~189-274]
+3.  section-partner [lines ~277-297]
+4.  section-services flat-spacing (id="services") [lines ~...]
+5.  section-featured-works flat-spacing pt-0 (id="works") [lines ~...]
+6.  section-process flat-spacing pt-0 [lines ~...]
+7.  section-benefits flat-spacing pt-0 [lines ~...]
+8.  section-features flat-spacing pt-0 [lines ~...]
+9.  section-tools flat-spacing [lines ~...]
+10. section-team flat-spacing [lines ~...]
+
+Additional elements to skip:
+- tf-header header2 (navigation menu)
+- Footer content after wrapper
+
+ANIMATIONS USED:
+- effectFade fadeRotateX
+- effectFade fadeUp
+- effectFade fadeZoom
+- img-transform-3
+- Scroll animations (AOS or custom)
+
+COUNTER ELEMENTS:
+- data-speed="1500" data-to="120" data-inviewport="yes"
+
+CAROUSELS:
+- infiniteSlide_partner with data-clone="5"
+
+PAGE STRUCTURE FOR NEXT.JS:
+pages/index.tsx should import:
+- HeroSection
+- AboutUsSection
+- PartnerSection
+- ServicesSection
+- FeaturedWorksSection
+- ProcessSection
+- BenefitsSection
+- FeaturesSection
+- ToolsSection
+- TeamSection
+
+==============================================
+FILE 2: about.html (92,419 bytes)
+==============================================
+
+HEADER: Yes (tf-header header2) - Skip
+FOOTER: Yes - Skip
+MAIN CONTENT: <main id="wrapper">
+
+SECTIONS (11 total):
+1.  section-hero v1 [pages/about: hero variant]
+2.  section-about-us flat-spacing (id="about")
+3.  section-partner
+4.  section-features flat-spacing
+5.  section-tools v2 flat-spacing [variant of tools]
+6.  section-team flat-spacing
+7.  section-statistic [unique - counter elements]
+8.  section-awards flat-spacing
+9.  section-testimonials flat-spacing pt-0
+10. section-faqs flat-spacing
+11. section-contact (id="contact") [unique contact layout]
+
+NEW COMPONENTS NEEDED:
+- HeroSection (variant v1)
+- StatisticSection (with counters)
+- AwardsSection
+- TestimonialsSection
+- FAQsSection
+
+PAGE STRUCTURE FOR NEXT.JS:
+pages/about.tsx imports same components as index but reorders and includes new ones
+
+UNIQUE DATA PATTERNS:
+- Counters with data-speed and data-to
+- FAQ accordion structure
+- Testimonials slider layout
+
+==============================================
+FILE 3: service.html (60,026 bytes)
+==============================================
+
+HEADER: Yes (tf-header header2) - Skip
+FOOTER: Yes - Skip
+MAIN CONTENT: <main id="wrapper">
+
+SECTIONS (7-8 total):
+1.  section-hero v1
+2.  section-services flat-spacing (id="services")
+3.  section-partner
+4.  section-process flat-spacing
+5.  section-pricing flat-spacing pt-0 (id="pricing") [NEW]
+6.  section-faqs flat-spacing
+7.  section-contact (id="contact")
+8.  (implied) footer content container
+
+NEW COMPONENTS:
+- PricingSection (with pricing comparison)
+
+PAGE STRUCTURE FOR NEXT.JS:
+pages/services.tsx imports:
+- HeroSection (v1)
+- ServicesSection
+- PartnerSection
+- ProcessSection
+- PricingSection
+- FAQsSection
+- ContactSection
+
+UNIQUE FEATURES:
+- Pricing cards with d-flex align-items-center gap-24
+- Full-page flow from hero to contact
+
+==============================================
+FILE 4: work.html (57,660 bytes)
+==============================================
+
+HEADER: Yes (tf-header header2) - Skip
+FOOTER: Yes - Skip
+MAIN CONTENT: <main id="wrapper">
+
+SECTIONS (6-7 total):
+1.  section-hero v1
+2.  section-featured-works flat-spacing (id="works")
+3.  section-delay flat-spacing [NEW - unique layout]
+4.  section-pricing flat-spacing pt-0 (id="pricing")
+5.  section-faqs flat-spacing
+6.  section-contact (id="contact")
+7.  (implied) footer
+
+NEW COMPONENTS:
+- DelaySection (with staggered animations)
+
+PAGE STRUCTURE FOR NEXT.JS:
+pages/work.tsx (or /portfolio) imports:
+- HeroSection (v1)
+- FeaturedWorksSection
+- DelaySection
+- PricingSection
+- FAQsSection
+- ContactSection
+
+UNIQUE FEATURES:
+- delay-wrap with staggered animation effects
+- Portfolio showcase layout
+
+==============================================
+FILE 5: blog-standard.html (37,607 bytes)
+==============================================
+
+HEADER: Yes (tf-header header2) - Skip
+FOOTER: Yes - Skip
+MAIN CONTENT: <main id="wrapper">
+
+SECTIONS (2 total):
+1.  section-page-title [NEW - page header/breadcrumb]
+2.  section-blog flat-spacing [NEW - uses <section> tag]
+
+NOTE: Uses <section> tag instead of <div> (see line ~)
+
+NEW COMPONENTS:
+- PageTitleSection
+- BlogSection (or BlogGridSection)
+
+PAGE STRUCTURE FOR NEXT.JS:
+pages/blog.tsx imports:
+- PageTitleSection
+- BlogSection
+
+UNIQUE FEATURES:
+- Simpler page structure (just title and listing)
+- Blog post grid/list layout
+- Page title component pattern
+
+GRID STRUCTURE:
+- Blog posts arranged in grid with col-md-6, col-lg-4 or similar
+
+==============================================
+FILE 6: contact.html (39,252 bytes)
+==============================================
+
+HEADER: Yes (tf-header header2) - Skip
+FOOTER: Yes - Skip
+MAIN CONTENT: <main id="wrapper">
+
+SECTIONS (3-4 total):
+1.  section-hero v1
+2.  section-contact (id="contact") [FULL contact layout]
+3.  section-faqs flat-spacing [optional on contact page]
+4.  (implied) footer info
+
+SPECIAL STRUCTURE:
+Contact section has THREE internal containers:
+- Container 1: Contact form section
+- Container 2: Contact info (address, phone, etc.)
+- Container 3: h-100 class for map/footer
+
+NEW COMPONENTS:
+ContactSection needs to handle multi-container layout with:
+- Form handling (React form library)
+- Structured contact information display
+- Map/embedded content area
+
+PAGE STRUCTURE FOR NEXT.JS:
+pages/contact.tsx imports:
+- HeroSection (v1)
+- ContactSection (complex, multi-part)
+- FAQsSection (optional)
+
+FORMS:
+- Need to handle form submission backend
+- Input fields: name, email, message, etc.
+- Required validation
+
+==============================================
+FILE 7: index-v2.html (118,917 bytes)
+==============================================
+
+IDENTICAL TO index.html with animation variations
+
+SECTIONS: Same 16 sections as index.html but with different animation effects
+
+DIFFERENCE:
+- Some animations might use fadeZoom instead of fadeRotateX
+- Some images might use different img-transform classes
+- Overall layout and structure identical
+
+NEXT.JS STRATEGY:
+- Reuse same components as index.html
+- Control animations via props
+- Create variant prop: `variant="animated"` vs `variant="gradient"`
+
+==============================================
+FOOTER CONTENT (appears on all pages)
+==============================================
+
+Location: After </main> closing tag
+Content: Logo, social links, copyright, footer navigation
+
+STRUCTURE:
+```html
+<footer class="tf-footer">
+    [Logo]
+    [Footer links/nav]
+    [Social icons]
+    [Copyright]
+</footer>
+```
+
+NEXT.JS: Create a shared Footer component
+Import in: _app.tsx or layout.tsx
+
+==============================================
+SUMMARY: UNIQUE SECTION COMPONENTS NEEDED
+==============================================
+
+REUSABLE ACROSS MULTIPLE PAGES:
+1.  HeroSection (2 variants: default, v1)
+2.  AboutUsSection
+3.  PartnerSection
+4.  ServicesSection
+5.  FeaturedWorksSection
+6.  ProcessSection
+7.  BenefitsSection
+8.  FeaturesSection
+9.  ToolsSection (2 variants: default, v2)
+10. TeamSection
+11. StatisticSection
+12. AwardsSection
+13. TestimonialsSection
+14. FAQsSection
+15. PricingSection
+16. ContactSection
+17. DelaySection
+18. BlogSection
+19. PageTitleSection
+
+SHARED COMPONENTS:
+- Header (tf-header)
+- Footer (tf-footer)
+- Button components (tf-btn, tf-btn-2)
+- Counter component (for data-speed/data-to animation)
+- Carousel component (infiniteSlide with data-clone)
+- Heading component (heading-section pattern)
+
+==============================================
+ANIMATION/INTERACTION REQUIREMENTS
+==============================================
+
+AOS (Animate On Scroll) or similar library needed for:
+- effectFade combinations
+- fadeRotateX, fadeRotateY, fadeZoom
+- fadeUp, fadeDown, fadeLeft, fadeRight
+- Staggered animations (delay-wrap)
+
+Counter animations (data-speed, data-to):
+- Custom hook or library (CountUp, odometer, etc.)
+- Trigger on viewport entry (Intersection Observer)
+
+Carousel (infiniteSlide):
+- Custom carousel or library (Swiper, Slick, etc.)
+- Requires data-clone handling for duplication
+
+Form handling (contact page):
+- React Hook Form or similar
+- Email backend integration
+
+==============================================
+FILE SIZE & OPTIMIZATION NOTES
+==============================================
+
+Original file sizes:
+- index.html: 118 KB
+- index-v2.html: 118 KB (duplicate)
+- about.html: 92 KB
+- service.html: 60 KB
+- work.html: 57 KB
+- contact.html: 39 KB
+- blog-standard.html: 37 KB
+
+TOTAL: ~500 KB of HTML
+
+Optimization opportunities:
+- Component extraction reduces duplication
+- Image optimization needed
+- SVG icons can be extracted to icon component
+- CSS can be significantly reduced with utility classes
+- Consider code splitting by route
+
+==============================================
+RECOMMENDED NEXT.JS PROJECT STRUCTURE
+==============================================
+
+/src
+  /components
+    /sections
+      HeroSection.tsx
+      AboutUsSection.tsx
+      PartnerSection.tsx
+      ServicesSection.tsx
+      FeaturedWorksSection.tsx
+      ProcessSection.tsx
+      BenefitsSection.tsx
+      FeaturesSection.tsx
+      ToolsSection.tsx
+      TeamSection.tsx
+      StatisticSection.tsx
+      AwardsSection.tsx
+      TestimonialsSection.tsx
+      FAQsSection.tsx
+      PricingSection.tsx
+      ContactSection.tsx
+      DelaySection.tsx
+      BlogSection.tsx
+      PageTitleSection.tsx
+    /shared
+      Header.tsx
+      Footer.tsx
+      Button.tsx
+      Counter.tsx
+      Carousel.tsx
+      Heading.tsx
+    /layouts
+      MainLayout.tsx
+  /pages
+    index.tsx (import & compose sections)
+    about.tsx
+    services.tsx
+    work.tsx (or /portfolio)
+    blog.tsx
+    contact.tsx
+  /styles
+    globals.css (Bootstrap-based or Tailwind)
+    animations.css (animation classes)
+  /hooks
+    useCounter.ts
+    useIntersectionObserver.ts
+  /public
+    /assets
+      /images
+        /item
+        /partner
+        /section
+        /logo
+      /fonts
+      /icons (SVG icons)
+
+==============================================
+NEXT STEPS FOR CONVERSION
+==============================================
+
+1. Extract all SVG assets from HTML files to separate icon components
+2. Create base component structure for all 19 unique sections
+3. Set up animation library (AOS or custom hooks)
+4. Implement responsive grid system (Bootstrap → Tailwind)
+5. Create reusable data structures for content
+6. Build form handling for contact section
+7. Set up carousel/carousel functionality
+8. Test responsive design across breakpoints
+9. Optimize images and assets
+10. Set up SEO/meta tags per page

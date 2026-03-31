@@ -1,0 +1,441 @@
+COMPLETE CSS CLASSES REFERENCE FOR NEXT.JS CONVERSION
+======================================================
+
+SECTION CLASSES (Primary container classes)
+============================================
+
+section-hero
+  - Variants: section-hero, section-hero v1
+  - Parent: <div> or <section>
+  - Child structure: .hero-image, .container, .content-wrap
+  - Content: Headings, descriptions, buttons, scroll anchor
+
+section-about-us
+  - Classes: section-about-us flat-spacing
+  - ID variant: id="about"
+  - Child structure: .container > .row > .col-* > .heading-section, .col-left, .col-right
+  - Responsive columns: col-xxl-7 col-lg-6, col-xxl-5 col-lg-6
+  - Content: About text, images, review box, testimonial quotes, counters
+
+section-partner
+  - Classes: section-partner
+  - Child: .partner-wrap, .infiniteSlide_tech_main.d-grid, .infiniteSlide.infiniteSlide_partner
+  - Data: data-clone="5"
+  - Content: Partner logo carousel
+
+section-services
+  - Classes: section-services flat-spacing
+  - ID variant: id="services"
+  - Child: .container > .row > .col-12 > .heading-section, then service cards
+  - Content: Service cards grid
+
+section-featured-works
+  - Classes: section-featured-works flat-spacing pt-0
+  - ID variant: id="works"
+  - Child: .container with work items
+  - Content: Portfolio/case studies grid
+
+section-process
+  - Classes: section-process flat-spacing pt-0
+  - Child: .container with process steps
+  - Content: 4+ step process with icons
+
+section-benefits
+  - Classes: section-benefits flat-spacing pt-0
+  - Child: .container with benefit cards
+  - Content: Feature/benefit cards
+
+section-features
+  - Classes: section-features flat-spacing pt-0
+  - Child: Multiple .container elements
+  - Special: .container.z-5 (z-index), .side-line-wrap, .features-wrap
+  - Content: Advanced features showcase
+
+section-tools
+  - Classes: section-tools flat-spacing
+  - Variants: section-tools, section-tools v2
+  - V2 variant child: .tool-wrap.text-center instead of .container
+  - Content: Technology/tools list
+
+section-team
+  - Classes: section-team flat-spacing
+  - Child: .container > .row > .col-* (team cards)
+  - Responsive: col-md-6, col-lg-3
+  - Content: Team member cards
+
+section-statistic
+  - Classes: section-statistic (NO flat-spacing)
+  - Child: .container with stat items
+  - Data attributes: data-speed, data-to, data-inviewport
+  - Content: Key metrics with animated counters
+
+section-awards
+  - Classes: section-awards flat-spacing
+  - Child: .container with award items
+  - Content: Awards/certifications grid
+
+section-testimonials
+  - Classes: section-testimonials flat-spacing pt-0
+  - Child: .container with testimonial cards/slider
+  - Content: Client testimonials
+
+section-faqs
+  - Classes: section-faqs flat-spacing
+  - Child: .container with FAQ items (accordion)
+  - Content: Collapsible FAQ items
+
+section-pricing
+  - Classes: section-pricing flat-spacing pt-0
+  - ID variant: id="pricing"
+  - Child: .container > .row, pricing cards, comparison flex layout
+  - Flex utilities: d-flex align-items-center gap-24 flex-wrap
+  - Content: Pricing plans/tables
+
+section-contact
+  - Classes: section-contact [p-0]
+  - Parent ID: id="contact" on wrapper .flat-spacing.pt-0
+  - Multi-container structure (form, info, map)
+  - Content: Contact form, information, embedded map
+
+section-delay
+  - Classes: section-delay flat-spacing
+  - Child: .delay-wrap with staggered items
+  - Content: Work items with animation delay
+
+section-blog
+  - Classes: section-blog flat-spacing
+  - Parent tag: <section> (not <div>)
+  - Child: .container with blog posts
+  - Content: Blog post grid/list
+
+section-page-title
+  - Classes: section-page-title (NO flat-spacing)
+  - Child: .container.text-center
+  - Content: Page title/heading with breadcrumb
+
+=====================================
+SPACING & LAYOUT CLASSES
+=====================================
+
+SPACING:
+- flat-spacing: Default vertical padding/margin for sections
+- pt-0: padding-top: 0
+- p-0: padding: 0 (all sides)
+- mb-24: margin-bottom (24 units)
+- mb-10: margin-bottom (10 units)
+- mb-8: margin-bottom (8 units)
+- lg-mb-24: margin-bottom responsive for large breakpoint
+- gap-2: flexbox gap, 2 units
+- gap-4: flexbox gap, 4 units
+- gap-12: flexbox gap, 12 units
+- gap-20: flexbox gap, 20 units
+- gap-24: flexbox gap, 24 units
+
+GRID/RESPONSIVE:
+- container: Max-width centered container (Bootstrap)
+- row: Flex row wrapper
+- col-12: Full width (12/12 columns)
+- col-md-6: 50% width on medium+ breakpoint
+- col-md-4: 33.33% width on medium+ breakpoint
+- col-lg-6: 50% width on large+ breakpoint
+- col-lg-3: 25% width on large+ breakpoint
+- col-lg-4: 33.33% width on large+ breakpoint
+- col-xxl-5: Custom large breakpoint, 5 units
+- col-xxl-7: Custom large breakpoint, 7 units
+- d-grid: CSS Grid display
+
+FLEXBOX:
+- d-flex: display: flex
+- flex-wrap: flex-wrap
+- justify-content-center: justify-content: center
+- justify-content-between: justify-content: space-between
+- align-items-center: align-items: center
+- align-items-end: align-items: flex-end
+- align-items-baseline: align-items: baseline
+
+Z-INDEX:
+- z-5: z-index: 5 (for layering/positioning)
+- position-relative: position: relative
+
+=====================================
+TYPOGRAPHY & TEXT CLASSES
+=====================================
+
+HEADING SIZES:
+- text-display-2: Extra large display heading (used in heroes)
+- text-body-1: Body text large
+- text-body-3: Body text small
+- heading-section: Semantic container for section heading
+- heading-sub: Small heading label/subtitle
+- heading-title: Large section title
+
+FONT WEIGHT:
+- fw-semibold: font-weight: 600
+
+TEXT ALIGNMENT:
+- text-center: text-align: center
+
+TEXT COLOR:
+- text-white: color: white
+- text-brand: Brand primary color
+- text-secondary: Secondary text color (lighter)
+- text-neutral-200: Neutral gray variant
+- text-gradient-1: Gradient fill (gradient-1)
+- text-gradient-2: Gradient fill (gradient-2)
+
+TEXT TRANSFORMS:
+- (Classes not specified for transforms, likely in CSS)
+
+================================
+ANIMATION CLASSES
+================================
+
+ANIMATION BASE:
+- effectFade: Base fade animation class
+
+ANIMATION DIRECTIONS:
+- fadeUp: Fade in from bottom
+- fadeDown: Fade in from top
+- fadeLeft: Fade in from left
+- fadeRight: Fade in from right
+- fadeZoom: Fade in with zoom
+- fadeRotateX: Fade in with X-axis rotation
+- fadeRotateY: Fade in with Y-axis rotation
+
+APPLIED TO:
+- Applied to content divs with: class="[content] effectFade [direction]"
+- Examples:
+  - <div class="title text-display-2 effectFade fadeRotateX">
+  - <div class="sub fw-semibold effectFade fadeUp">
+  - <p class="text effectFade fadeUp">
+
+IMAGE ANIMATIONS:
+- img-transform-3: Applied to <img> elements for animation effects
+  - Used in: hero section, about section, team cards, etc.
+
+SCROLL ANIMATIONS:
+- All animation classes trigger via Intersection Observer
+- Typically combined with data-inviewport="yes"
+
+================================
+COMPONENT-SPECIFIC CLASSES
+================================
+
+NAVIGATION:
+- tf-header: Main header component
+- header2: Header variant
+- nav-menu-main: Main navigation menu
+- menu-item: Navigation menu item
+- has-child: Menu item with submenu
+- item-link: Navigation link
+- link1: Link style variant
+- sub-menu: Submenu container
+- sub-menu-item: Submenu item
+
+BUTTONS:
+- tf-btn: Primary button style
+- tf-btn-2: Secondary button style
+- Apply to: <a>, <button>
+
+HERO SPECIFIC:
+- hero-image: Background image container (usually ::before pseudo)
+- content-wrap: Content wrapper in hero
+- title: Main title element
+- title1: Title variant 1
+- title2: Title variant 2 (flex container with gap-20)
+- title-icon: Icon container in title
+- box: Decorative box in title-icon
+- title-icon-wrap: Wrapper for title images
+- bot-btns: Bottom buttons container
+- scroll-more: Scroll-down anchor link
+
+ABOUT SPECIFIC:
+- col-left: Left column content area
+- col-right: Right column content area
+- review-box: Review/testimonial box
+- box-quotes: Quote block with image
+- counter: Counter container
+- number: Counter number element
+- cite: Citation/attribution
+- dot: Decorative dot (pseudo element usually)
+
+PARTNER/CAROUSEL:
+- partner-wrap: Partner carousel wrapper
+- infiniteSlide_tech_main: Main carousel container
+- infiniteSlide: Carousel track
+- infiniteSlide_partner: Partner carousel variant
+
+FEATURE/GRID SPECIFIC:
+- features-wrap: Features grid container
+- side-line-wrap: Container with side decorative lines
+- delay-wrap: Wrapper for staggered animation items
+
+FOOTER:
+- tf-footer: Main footer component
+
+================================
+DATA ATTRIBUTES
+================================
+
+COUNTER ANIMATION:
+- data-speed="[integer]": Animation duration in milliseconds
+  - Examples: 1000, 1500, 2000
+  - Applied to: <span class="number">
+
+- data-to="[integer]": Target counter value
+  - Examples: 120, 500, 1000
+  - Applied to: <span class="number">
+
+- data-inviewport="yes": Trigger when visible in viewport
+  - Used on: Counter elements
+  - Requires: Intersection Observer implementation
+
+CAROUSEL:
+- data-clone="[integer]": Number of clone slides for infinite loop
+  - Examples: data-clone="5"
+  - Applied to: .infiniteSlide elements
+  - Purpose: Creates seamless infinite carousel loop
+
+================================
+FORM ELEMENTS (contact.html)
+================================
+
+Form structure:
+- <form> tag with action/method
+- Input types: text, email, textarea
+- Standard HTML5 form structure
+- Classes: Likely form-control, form-group (Bootstrap)
+
+Inputs needed:
+- Name field (text)
+- Email field (email)
+- Message field (textarea)
+- Submit button (tf-btn)
+
+No custom classes visible in structure, uses Bootstrap form classes
+
+================================
+ICONS & SVG
+================================
+
+ICON FONT:
+- Class: icon [icon-name]
+- Examples:
+  - <i class="icon icon-long-arrow-alt-down-solid"></i>
+  - <i class="icon icon-long-arrow-alt-up-solid"></i>
+- Font: icomoon (custom icon font)
+- Stylesheet: assets/icon/icomoon/style.css
+
+INLINE SVG:
+- Logo SVG: <img src="assets/images/logo/logo.svg" alt="">
+- Hero images: SVG illustrations (hero-1.svg, hero-2.svg, hero-3.svg)
+- Partner logos: SVG files in partner/ directory
+- Icons in heading: Inline <svg> elements
+
+================================
+RESPONSIVE BREAKPOINTS (Inferred from Bootstrap)
+================================
+
+Bootstrap standard breakpoints:
+- xs: < 576px
+- sm: >= 576px
+- md: >= 768px
+- lg: >= 992px
+- xl: >= 1200px
+- xxl: >= 1400px (custom for this template)
+
+Used in classes:
+- col-md-6, col-md-4, col-md-3 (768px+)
+- col-lg-6, col-lg-4, col-lg-3 (992px+)
+- col-xxl-5, col-xxl-7 (1400px+)
+- lg-mb-24 (margin at lg breakpoint)
+
+================================
+UTILITY CLASS PATTERNS
+================================
+
+Common patterns:
+1. d-flex [flex-wrap] [justify-content-*] [align-items-*] [gap-*]
+2. [spacing] [grid-cols] [text-align] [color]
+3. section-[name] [spacing-modifiers] [optional-id]
+4. [animation-base] [animation-direction]
+5. [element] effectFade [direction-variant]
+
+Examples:
+- <div class="d-flex gap-20 justify-content-center flex-wrap">
+- <div class="section-services flat-spacing" id="services">
+- <div class="title text-display-2 effectFade fadeRotateX">
+- <span class="number" data-speed="1500" data-to="120">
+
+================================
+CSS REQUIREMENTS FOR CONVERSION
+================================
+
+NEEDED STYLES (from assets/css/):
+1. bootstrap.min.css - Reset, grid, utilities
+2. animate.css - Animation library
+3. swiper-bundle.min.css - Carousel library
+4. slick.css / slick.theme.css - Alternative carousel
+5. styles.css - Custom template styles
+6. fonts.css - Custom fonts
+7. icomoon icon font - Icon system
+
+Key custom styles likely in styles.css:
+- .effectFade animations (keyframes)
+- .text-gradient-1, .text-gradient-2 (gradient definitions)
+- .infiniteSlide animation
+- .tf-btn, .tf-btn-2 button styles
+- .section-* base styles and spacing
+- Responsive grid adjustments
+- Color variables (--text-brand, etc.)
+- Font-face declarations
+
+For Next.js conversion:
+- Extract custom CSS to global.css
+- Convert Bootstrap to Tailwind or keep Bootstrap
+- Implement animation library (Framer Motion, AOS, or custom)
+- Use CSS Modules for component styles
+
+================================
+ACCESSIBILITY CONSIDERATIONS
+================================
+
+Current structure:
+- Semantic HTML (section, article) used minimally
+- Main navigation in header
+- Images have alt attributes
+- Form fields need labels
+- Color contrast for text (likely sufficient)
+
+For improvement in Next.js:
+- Add aria-labels where needed
+- Ensure heading hierarchy (h1-h6)
+- Form accessibility (labels, error messages)
+- Keyboard navigation support
+- Screen reader testing
+
+================================
+IMPORTS NEEDED FOR NEXT.JS COMPONENTS
+================================
+
+Each section component should import:
+- React (useState, useEffect, useRef, etc.)
+- Custom animation hook or library
+- CSS module or inline styles
+- Child components (Button, Counter, etc.)
+- Image component from Next.js
+
+Example imports:
+```
+import React from 'react'
+import { useInView } from 'react-intersection-observer'
+import Button from '@/components/shared/Button'
+import Counter from '@/components/shared/Counter'
+import styles from './HeroSection.module.css'
+```
+
+Global imports needed:
+- Bootstrap CSS (or Tailwind config)
+- Animation CSS (animate.css or custom)
+- Font CSS
+- Icon CSS (icomoon or alternative)
