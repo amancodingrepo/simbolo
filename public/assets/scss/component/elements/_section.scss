@@ -156,16 +156,16 @@
                 width: 255px;
                 height: 80px;
                 border-radius: 999px;
-                background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%);
+                background: linear-gradient(180deg, #5ACEB3 0%, #5ACEB3 100%);
                 box-shadow: 
                 0px 3.44px 5.57px 0px #00000016,
-                0px 22.91px 37.08px 0px #FF3B002A,
-                0px 76px 123px 0px #FF3B000D,
-                0px 5.05px 8.18px 0px #FF3B001A,
-                0px 16.98px 27.47px 0px #FF3B000C,
-                0px 56px 83px 0px #FF3B0040,
-                0px 14px 34px 0px #FF3B0040,
-                0px 1px 2px 0px #FF3B0066;
+                0px 22.91px 37.08px 0px #5ACEB32A,
+                0px 76px 123px 0px #5ACEB30D,
+                0px 5.05px 8.18px 0px #5ACEB31A,
+                0px 16.98px 27.47px 0px #5ACEB30C,
+                0px 56px 83px 0px #5ACEB340,
+                0px 14px 34px 0px #5ACEB340,
+                0px 1px 2px 0px #5ACEB366;
             }
             .title-icon-wrap {
                 position: absolute;
@@ -332,7 +332,7 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%,-50%);
-                    background-color: #FD3A2540;
+                    background-color: #5ACEB340;
                     border-radius: 50%;
                     animation: rippleFade 1.8s ease-out infinite;
                 }
@@ -810,15 +810,15 @@
         font-size: 32px;
         color: var(--white);
         border-radius: 16px;
-        background: linear-gradient(180deg, #EA2B16 0%, #FF3B26 100%);
+        background: linear-gradient(180deg, #5ACEB3 0%, #5ACEB3 100%);
         box-shadow: 0px 3.44px 5.57px 0px #00000016,
-        0px 22.91px 37.08px 0px #FF3B002A,
-        0px 76px 123px 0px #FF3B000D,
-        0px 5.05px 8.18px 0px #FF3B001A,
-        0px 16.98px 27.47px 0px #FF3B000C,
-        0px 56px 83px 0px #FF3B0040,
-        0px 14px 34px 0px #FF3B0040,
-        0px 1px 2px 0px #FF3B0066,
+        0px 22.91px 37.08px 0px #5ACEB32A,
+        0px 76px 123px 0px #5ACEB30D,
+        0px 5.05px 8.18px 0px #5ACEB31A,
+        0px 16.98px 27.47px 0px #5ACEB30C,
+        0px 56px 83px 0px #5ACEB340,
+        0px 14px 34px 0px #5ACEB340,
+        0px 1px 2px 0px #5ACEB366,
         0px -3px 0px 0px #0000000F inset,
         0px 1px 0px 0px #FFFFFF99 inset;
         margin-bottom: 96px;

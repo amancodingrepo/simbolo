@@ -4,12 +4,14 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer-image">
-        <img className="effectFade fadeUp" src="/assets/images/logo/logo-footer.png" alt="" />
+        <img className="effectFade fadeUp" src="/assets/aman/footer.png" alt="" />
       </div>
       <div className="container">
         <div className="footer-content">
           <Link href="/" className="footer-logo">
-            <img src="/assets/images/logo/logo-2.svg" alt="" />
+            <div style={{ width: '72px', height: '72px', borderRadius: '18px', background: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '10px' }}>
+              <img src="/assets/aman/logogo.png" alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            </div>
           </Link>
           <div className="title h6 fw-semibold">Scale <br /> with Simbolo on social</div>
           <div className="text">Get the latest growth strategies and visual trends!</div>

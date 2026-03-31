@@ -33,8 +33,17 @@ export default function FeaturesSection() {
                 </p>
               </div>
             </div>
-            <div className="features-center flex-shrink">
-              <img src="/assets/images/logo/logo-1.svg" alt="" />
+            <div className="features-center flex-shrink" style={{ background: '#fff', width: 'auto', height: 'auto', padding: '24px 32px' }}>
+              <img
+                src="/assets/aman/logogo.png"
+                alt="Logo"
+                style={{
+                  width: '140px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  display: 'block',
+                }}
+              />
             </div>
             <div className="features-col col-right">
               <div className="features-item effectFade fadeUp" data-delay="0.1">

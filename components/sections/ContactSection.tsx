@@ -20,7 +20,7 @@ const defaultContactInfo: ContactInfo[] = [
 export default function ContactSection({
   headingSubtitle = 'Contact',
   headingTitle = "Let's Scale <br /> Your Brand",
-  backgroundImage = '/assets/images/section/contact-image-bg.jpg',
+  backgroundImage = '/assets/aman/mid.png',
   contactInfo = defaultContactInfo,
   formHeading = 'Tell us about your project',
 }: ContactSectionProps) {
@@ -28,9 +28,11 @@ export default function ContactSection({
     <div id="contact" className="flat-spacing pt-0">
       <div className="section-contact">
         <div className="contact-image">
-          <img src={backgroundImage} alt="" />
+          <img src={backgroundImage} alt="" style={{ opacity: 0.9 }} />
         </div>
-        <div className="container">
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(255,255,255,0.5)', zIndex: 1 }} />
+
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="row">
             <div className="col-lg-6">
               <div className="col-left">

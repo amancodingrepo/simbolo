@@ -32,7 +32,7 @@ export default function HeroSection({
       <div
         className="hero-image"
         style={{
-          backgroundImage: 'url(/assets/images/section/heroo.png)',
+          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(/assets/aman/hero.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           position: 'absolute',
@@ -40,8 +40,10 @@ export default function HeroSection({
           left: 0,
           width: '100%',
           height: '100%',
-          zIndex: -1
+          zIndex: -1,
+          opacity: 1
         }}
+
       ></div>
       <div className="container">
         <div className="content-wrap text-center">
@@ -58,16 +60,16 @@ export default function HeroSection({
                     <stop offset="1" stopColor="#292C2E" />
                   </linearGradient>
                   <linearGradient id="paint1_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
-                    <stop offset="1" stopColor="#EA2B16" />
-                    <stop offset="1" stopColor="#FF3B26" />
+                    <stop offset="1" stopColor="#5ACEB3" />
+                    <stop offset="1" stopColor="#5ACEB3" />
                   </linearGradient>
                   <linearGradient id="paint2_linear_580_105" x1="10.2993" y1="-1.30435" x2="21.6031" y2="11.1057" gradientUnits="userSpaceOnUse">
                     <stop offset="1" stopColor="#555D64" />
                     <stop offset="1" stopColor="#292C2E" />
                   </linearGradient>
                   <linearGradient id="paint3_linear_580_105" x1="10.0034" y1="0" x2="10.0034" y2="20" gradientUnits="userSpaceOnUse">
-                    <stop offset="1" stopColor="#EA2B16" />
-                    <stop offset="1" stopColor="#FF3B26" />
+                    <stop offset="1" stopColor="#5ACEB3" />
+                    <stop offset="1" stopColor="#5ACEB3" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -79,13 +81,15 @@ export default function HeroSection({
             <br />
             <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
               <span className="fw-semibold text-gradient-1">{title2}</span>
-              <div className="title-icon">
-                <div className="box"></div>
-                <div className="title-icon-wrap">
-                  <img className="img-1 img-transform-3" src="/assets/images/item/hero-1.svg" alt="" />
-                  <img className="img-2 img-transform-3" src="/assets/images/item/hero-2.svg" alt="" />
-                  <img className="img-3 img-transform-3" src="/assets/images/item/hero-3.svg" alt="" />
-                </div>
+              <div className="title-icon" style={{ width: '320px' }}>
+                {/* Google — top-left */}
+                <img src="/assets/aman/google-icon-logo-svgrepo-com.svg" alt="Google" style={{ position: 'absolute', top: '5px', left: '12px', width: '50px', height: '50px', objectFit: 'contain', transform: 'rotate(-18deg)', zIndex: 3 }} />
+                {/* LinkedIn — right */}
+                <img src="/assets/aman/linkedin-svgrepo-com.svg" alt="LinkedIn" style={{ position: 'absolute', top: '22px', right: '5px', width: '50px', height: '50px', objectFit: 'contain', transform: 'rotate(15deg)', zIndex: 3 }} />
+                {/* Meta — bottom-center */}
+                <img src="/assets/aman/meta.webp" alt="Meta" style={{ position: 'absolute', bottom: '0px', left: '95px', width: '50px', height: '50px', objectFit: 'contain', transform: 'rotate(-10deg)', zIndex: 3 }} />
+                {/* Green pill — on top */}
+                <div className="box" style={{ position: 'relative', zIndex: 2 }} />
               </div>
             </div>
           </div>

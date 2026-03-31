@@ -7,9 +7,7 @@ import ProcessSection from '@/components/sections/ProcessSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
 import FeaturesSection from '@/components/sections/FeaturesSection';
 import ToolsSection from '@/components/sections/ToolsSection';
-import TeamSection from '@/components/sections/TeamSection';
 import StatisticSection from '@/components/sections/StatisticSection';
-import AwardsSection from '@/components/sections/AwardsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import PricingSection from '@/components/sections/PricingSection';
 import FAQsSection from '@/components/sections/FAQsSection';
@@ -37,9 +35,7 @@ export default function Home() {
         <img className="light-top" src="/assets/images/item/light-top.png" alt="" />
         <img className="light-bot" src="/assets/images/item/light-bot.png" alt="" />
 
-        <TeamSection />
         <StatisticSection />
-        <AwardsSection />
         <TestimonialsSection />
       </div>
 

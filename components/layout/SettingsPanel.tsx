@@ -123,11 +123,11 @@ export default function SettingsPanel() {
 
 function getColorValue(colorClass: string): string {
   const colors: Record<string, string> = {
-    "color-primary-1": "#FF6B6B",
+    "color-primary-1": "#5ACEB3",
     "color-primary-2": "#4ECDC4",
     "color-primary-3": "#45B7D1",
-    "color-primary-4": "#FFA07A",
+    "color-primary-4": "#5ACEB3",
     "color-primary-5": "#98D8C8",
   };
-  return colors[colorClass] || "#FF6B6B";
+  return colors[colorClass] || "#5ACEB3";
 }
