@@ -8347,7 +8347,7 @@ button.animate-btn::after,
   color: var(--white);
   font-size: 20px;
   text-align: center;
-  line-height: 50px;
+  line-height: 1;
   cursor: pointer;
   border: none;
   opacity: 0;
@@ -8400,6 +8400,20 @@ button.animate-btn::after,
   transition: all 0.3s ease;
   animation: iconBounce 2s linear 0s infinite;
   display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+#goTop .go-top-arrow {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: var(--white);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateY(-1px);
 }
 #goTop:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);

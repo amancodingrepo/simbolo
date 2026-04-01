@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 export default function GoTopButton() {
   const [isVisible, setIsVisible] = useState(false);
-  const [scrollPercent, setScrollPercent] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,8 +11,6 @@ export default function GoTopButton() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercentage = (scrollTop / docHeight) * 100;
       const progressAngle = (scrollPercentage / 100) * 360;
-
-      setScrollPercent(progressAngle);
 
       const windowBottom = scrollTop + window.innerHeight;
       const footer = document.querySelector("footer");
@@ -44,12 +41,14 @@ export default function GoTopButton() {
       id="goTop"
       onClick={scrollToTop}
       className={isVisible ? "show" : ""}
-      style={{ display: isVisible ? "block" : "none" }}
       aria-label="Scroll to top"
     >
       <span className="border-progress"></span>
-      <span className="ic-wrap">
-        <span className="icon icon-long-arrow-alt-up-solid"></span>
+      <span className="ic-wrap" aria-hidden="true">
+        <svg className="go-top-arrow" viewBox="0 0 24 24" focusable="false">
+          <path d="M12 18V6"></path>
+          <path d="M7 11L12 6L17 11"></path>
+        </svg>
       </span>
     </button>
   );
