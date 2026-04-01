@@ -81,16 +81,6 @@ export default function HeroSection({
             <br />
             <div className="title2 d-flex gap-20 justify-content-center flex-wrap">
               <span className="fw-semibold text-gradient-1">{title2}</span>
-              <div className="title-icon" style={{ width: '320px' }}>
-                {/* Google — top-left */}
-                <img src="/assets/aman/google-icon-logo-svgrepo-com.svg" alt="Google" style={{ position: 'absolute', top: '5px', left: '12px', width: '50px', height: '50px', objectFit: 'contain', transform: 'rotate(-18deg)', zIndex: 3 }} />
-                {/* LinkedIn — right */}
-                <img src="/assets/aman/linkedin-svgrepo-com.svg" alt="LinkedIn" style={{ position: 'absolute', top: '22px', right: '5px', width: '50px', height: '50px', objectFit: 'contain', transform: 'rotate(15deg)', zIndex: 3 }} />
-                {/* Meta — bottom-center */}
-                <img src="/assets/aman/meta.webp" alt="Meta" style={{ position: 'absolute', bottom: '0px', left: '95px', width: '50px', height: '50px', objectFit: 'contain', transform: 'rotate(-10deg)', zIndex: 3 }} />
-                {/* Green pill — on top */}
-                <div className="box" style={{ position: 'relative', zIndex: 2 }} />
-              </div>
             </div>
           </div>
           <p className="text effectFade fadeUp">{description}</p>

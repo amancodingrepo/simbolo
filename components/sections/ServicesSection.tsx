@@ -1,11 +1,12 @@
 'use client';
 
+import { useState } from 'react';
+
 interface ServiceItem {
   id?: string;
   title: string;
   description: string;
   details?: string;
-  image?: string;
   tags?: string[];
 }
 
@@ -16,7 +17,6 @@ interface ServicesSectionProps {
   heading?: string | React.ReactNode;
   description?: string;
   services?: ServiceItem[];
-  defaultImage?: string;
 }
 
 const defaultServices: ServiceItem[] = [
@@ -24,40 +24,33 @@ const defaultServices: ServiceItem[] = [
     id: 'faq-1',
     title: 'Viral Social & <br /> Trending Content',
     description: 'We turn attention into equity. Short-form Instagram reels and platform-native content designed to hack engagement and build loyal communities.',
-    image: 'assets/images/section/service-2.jpg',
     tags: ['Instagram Reels', 'Trend forecasting', 'Audience retention optimization'],
   },
   {
     id: 'faq-2',
     title: 'E-Commerce <br /> & Web Ecosystems',
     description: 'We design and develop digital storefronts and marketing funnels that turn passive browsers into repeat buyers.',
-    image: 'assets/images/section/service-3.jpg',
     tags: ['Web design', 'E-commerce optimization', 'Funnel conversion mapping'],
   },
   {
     id: 'faq-3',
     title: 'High-Ticket Product <br /> & Real Estate Media',
     description: 'Premium food, product, and real estate cinematography that justifies premium pricing and accelerates sales cycles.',
-    image: 'assets/images/section/service-4.jpg',
     tags: ['Product shoots', 'Real estate tours', 'Perceived value enhancement'],
   },
   {
     id: 'faq-4',
     title: 'Corporate Authority <br /> & Internet Marketing',
     description: 'Interviews, event coverage, and digital marketing campaigns that establish industry dominance and generate qualified B2B leads.',
-    image: 'assets/images/section/service-1.jpg',
     tags: ['Corporate identity', 'Lead generation', 'Authority building'],
   },
   {
     id: 'faq-5',
     title: 'Commercial Ads <br /> & Brand Films',
     description: 'We produce high-end visual narratives that elevate your market positioning and drive measurable customer acquisition.',
-    image: 'assets/images/section/service-1.jpg',
     tags: ['Creative strategy', 'High-end production', 'Conversion-focused storytelling'],
   },
 ];
-
-import { useState } from 'react';
 
 export default function ServicesSection({
   sectionId = 'services',
@@ -66,57 +59,46 @@ export default function ServicesSection({
   heading,
   description = 'From high-converting commercials to frictionless e-commerce web experiences, every asset we create is mapped directly to your business goals.',
   services = defaultServices,
-  defaultImage = '/assets/images/section/service-1.jpg',
 }: ServicesSectionProps) {
   const resolvedHeadingTitle = heading ?? headingTitle ?? <>We Engineer Results, <br /> Not Just Deliverables</>;
 
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [displayedImage, setDisplayedImage] = useState(services[0]?.image ?? defaultImage);
-  const [imgOpacity, setImgOpacity] = useState(1);
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
-  const handleMouseEnter = (i: number) => {
-    setActiveIdx(i);
-    setImgOpacity(0);
-    setTimeout(() => {
-      setDisplayedImage(services[i]?.image ?? defaultImage);
-      setImgOpacity(1);
-    }, 300);
-  };
-
-  const handleMouseLeave = () => {
-    setActiveIdx(0);
-    setImgOpacity(0);
-    setTimeout(() => {
-      setDisplayedImage(services[0]?.image ?? defaultImage);
-      setImgOpacity(1);
-    }, 300);
+  const handleClick = (i: number) => {
+    setActiveIdx(activeIdx === i ? null : i);
   };
 
   return (
     <div id={sectionId} className="section-services flat-spacing">
       <div className="container">
-        <div className="row justify-content-between">
-          <div className="col-xxl-4 col-lg-6">
-            <div className="d-flex flex-column justify-content-between h-100">
-              <div className="col-left">
-                <div className="heading-section mb-48">
-                  <div className="heading-sub fw-semibold effectFade fadeUp">{headingSubtitle}</div>
-                  <div className="heading-title text-gradient-3 effectFade fadeRotateX">
-                    {resolvedHeadingTitle}
-                  </div>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '48px' }}>
+          {/* Sticky left column */}
+          <div style={{ flex: '0 0 38%', position: 'sticky', top: '100px', alignSelf: 'flex-start' }}>
+            <div className="col-left">
+              <div className="heading-section mb-48">
+                <div className="heading-sub fw-semibold effectFade fadeUp">{headingSubtitle}</div>
+                <div className="heading-title text-gradient-3 effectFade fadeRotateX">
+                  {resolvedHeadingTitle}
                 </div>
-                <p className="effectFade fadeUp">{description}</p>
               </div>
+              <p className="effectFade fadeUp">{description}</p>
             </div>
           </div>
-          <div className="col-xxl-6 col-lg-6">
+          {/* Scrollable right column */}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <style>{`
+              .accordion-faq_item { cursor: pointer; transition: color 0.25s ease; }
+              .accordion-faq_item:hover .accordion-title,
+              .accordion-faq_item.active .accordion-title { color: var(--primary, #a78bfa); }
+              .accordion-faq_item:hover .num,
+              .accordion-faq_item.active .num { color: var(--primary, #a78bfa); }
+            `}</style>
             <div className="accordion-faq_list">
               {services.map((service, i) => (
                 <div
                   key={i}
-                  className="accordion-faq_item effectFade fadeUp"
-                  onMouseEnter={() => handleMouseEnter(i)}
-                  onMouseLeave={handleMouseLeave}
+                  className={`accordion-faq_item effectFade fadeUp${activeIdx === i ? ' active' : ''}`}
+                  onClick={() => handleClick(i)}
                 >
                   <div className={`accordion-action services-image-btn${activeIdx === i ? ' active-img' : ' collapsed'}`}>
                     <div className="accordion-title">
@@ -147,14 +129,7 @@ export default function ServicesSection({
               ))}
             </div>
           </div>
-          <div className="services-image effectFade fadeUp">
-            <img
-              src={displayedImage}
-              alt=""
-              style={{ opacity: imgOpacity, transition: 'opacity 0.2s ease-in-out' }}
-            />
-          </div>
-        </div>
+        </div>{/* end flex row */}
       </div>
     </div>
   );

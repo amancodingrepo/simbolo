@@ -1,10 +1,12 @@
 window.initSimboloSwipers = function () {
+  try {
     if (window.SimboloSwiperInstances) {
         window.SimboloSwiperInstances.forEach(s => s?.destroy?.(true, true));
     }
     window.SimboloSwiperInstances = [];
 
     $(".tf-swiper").each(function (index, element) {
+        if (!element || !(element instanceof Element)) return;
         var $this = $(element);
         var laptop = $this.data("laptop") || 1;
         var preview = $this.data("preview") || 1;
@@ -143,7 +145,7 @@ window.initSimboloSwipers = function () {
             });
     });
 
-    if ($(".section-testimonials").length > 0) {
+    if ($(".section-testimonials").length > 0 && document.querySelector(".sw-main-image") && document.querySelector(".swiper-testimonial")) {
         const thumbSwiper = new Swiper(".sw-main-image", {
             slidesPerView: 1,
             watchSlidesProgress: true,
@@ -170,7 +172,7 @@ window.initSimboloSwipers = function () {
         window.SimboloSwiperInstances.push(thumbSwiper, mainSwiper);
     }
 
-    if ($(".swiper-progressbar").length > 0) {
+    if ($(".swiper-progressbar").length > 0 && document.querySelector(".swiper-progressbar")) {
         const progressFill = document.getElementById("progressBar");
         const SLIDE_DURATION = 5000;
         let startTime = null;
@@ -217,6 +219,9 @@ window.initSimboloSwipers = function () {
         resetProgress();
         animateProgress(performance.now());
     }
+  } catch (e) {
+    console.warn('[Simbolo] Swiper init error:', e);
+  }
 };
 
 $(window).on("load", function () {

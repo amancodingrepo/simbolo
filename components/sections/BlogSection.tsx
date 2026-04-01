@@ -1,3 +1,5 @@
+import { blogs } from '@/lib/blogs';
+
 interface BlogPost {
   title: string;
   excerpt: string;
@@ -21,45 +23,24 @@ interface BlogSectionProps {
   sidebarTags?: string[];
 }
 
-const defaultPosts: BlogPost[] = [
-  {
-    title: 'From Prototype to Production: How We Ship AI in 8 Weeks',
-    excerpt: 'The step-by-step sprint methodology we use to take AI copilots from idea to deployed, monitored, production feature.',
-    image: '/assets/images/blog/blog-1.jpg',
-    date: 'Mar 30, 2026',
-    category: 'AI Strategy',
-    href: '/blog/single',
-    author: 'Ava Collins',
-  },
-  {
-    title: 'Eval-First: Why We Test AI Before We Build It',
-    excerpt: 'Running evals before writing a single line of prod code sounds backwards—until you see how much time it saves.',
-    image: '/assets/images/blog/blog-2.jpg',
-    date: 'Mar 25, 2026',
-    category: 'Engineering',
-    href: '/blog/single',
-    author: 'Marcus Tan',
-  },
-  {
-    title: 'Designing for Trust: UX Patterns for AI Products',
-    excerpt: 'The prompts, interface patterns, and guardrails that make users trust—and actually use—AI-powered features.',
-    image: '/assets/images/blog/blog-3.jpg',
-    date: 'Mar 20, 2026',
-    category: 'AI UX',
-    href: '/blog/single',
-    author: 'David Kim',
-  },
-];
+const defaultPosts: BlogPost[] = blogs.map(b => ({
+  title: b.title,
+  excerpt: b.excerpt,
+  image: b.image,
+  date: b.date,
+  category: b.category,
+  href: `/blog/${b.slug}`,
+  author: b.author,
+}));
 
 const defaultSidebarCategories: SidebarCategory[] = [
-  { name: 'AI Strategy', count: 4 },
-  { name: 'Engineering', count: 3 },
-  { name: 'AI UX', count: 2 },
-  { name: 'Data Science', count: 2 },
-  { name: 'MLOps', count: 1 },
+  { name: '3D & CGI', count: 1 },
+  { name: 'Photography', count: 1 },
+  { name: 'Content Strategy', count: 1 },
+  { name: 'Graphic Design', count: 1 },
 ];
 
-const defaultSidebarTags = ['LLM', 'Evaluation', 'Deployment', 'Product Design', 'AI Ops'];
+const defaultSidebarTags = ['3D Rendering', 'Product Photography', 'Video Editing', 'Real Estate', 'E-Commerce', 'Branding'];
 
 // Delay cycle for staggered animations: matches template data-delay pattern
 function getDelay(index: number, cols: number): string | undefined {

@@ -18,13 +18,13 @@ const partners = [
 export default function PartnerMarquee() {
   return (
     <div style={{ padding: '24px 0' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0', paddingRight: '120px' }}>
         <div style={{ flexShrink: 0, paddingLeft: '120px', paddingRight: '0px', whiteSpace: 'nowrap' }}>
           <p style={{ margin: 0, fontSize: '19px', fontWeight: 600, color: '#999', lineHeight: '1.4' }}>
             Trusted by 100+<br />top-tier brands
           </p>
         </div>
-        <div style={{ overflow: 'hidden', width: 'calc(6 * 140px)', flexShrink: 0, WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)', maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)' }}>
+        <div style={{ overflow: 'hidden', flex: 1, minWidth: 0, WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)', maskImage: 'linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)' }}>
           <style>{`
             @keyframes marquee {
               0% { transform: translateX(0); }

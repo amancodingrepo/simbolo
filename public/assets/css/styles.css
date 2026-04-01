@@ -6615,7 +6615,7 @@ button.animate-btn::after,
   letter-spacing: -0.03em;
 }
 .section-statistic .swiper .statistic-number .prefix {
-  font-size: 232px;
+  font-size: 185.6px;
 }
 @media (max-width: 767px) {
   .section-statistic .swiper .statistic-number {
@@ -6623,7 +6623,7 @@ button.animate-btn::after,
     line-height: 70px;
   }
   .section-statistic .swiper .statistic-number .prefix {
-    font-size: 67px;
+    font-size: 53.6px;
   }
 }
 @media (max-width: 1199px) {
@@ -6632,7 +6632,7 @@ button.animate-btn::after,
     line-height: 160px;
   }
   .section-statistic .swiper .statistic-number .prefix {
-    font-size: 150px;
+    font-size: 120px;
   }
 }
 @media (max-width: 991px) {
@@ -6641,7 +6641,7 @@ button.animate-btn::after,
     line-height: 110px;
   }
   .section-statistic .swiper .statistic-number .prefix {
-    font-size: 100px;
+    font-size: 80px;
   }
 }
 @media (max-width: 767px) {

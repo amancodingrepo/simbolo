@@ -16,28 +16,28 @@ export default function Footer() {
           <div className="title h6 fw-semibold">Scale <br /> with Simbolo on social</div>
           <div className="text">Get the latest growth strategies and visual trends!</div>
           <div className="tf-social-1 justify-content-center">
-            <a href="https://www.instagram.com/" target="_blank" className="text-body-1 fw-semibold">
+            <a href="https://www.instagram.com/the_simbolo_?igsh=ZXloMjlwcHpnandh" target="_blank" className="text-body-1 fw-semibold">
               Instagram
               <div className="social-item">
                 <i className="icon icon-instagram"></i>
               </div>
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" className="text-body-1 fw-semibold">
+            <a href="https://www.linkedin.com/company/thesimbolomultimedia/" target="_blank" className="text-body-1 fw-semibold">
               Linkedin
               <div className="social-item">
                 <i className="icon icon-linkedin-in"></i>
               </div>
             </a>
-            <a href="https://www.facebook.com/" target="_blank" className="text-body-1 fw-semibold">
+            <a href="https://www.facebook.com/thesimbolo" target="_blank" className="text-body-1 fw-semibold">
               Facebook
               <div className="social-item">
                 <i className="icon icon-facebook-f"></i>
               </div>
             </a>
-            <a href="https://x.com/" target="_blank" className="text-body-1 fw-semibold">
-              Twitter / X
+            <a href="mailto:thesimbolomultimedia@gmail.com" className="text-body-1 fw-semibold">
+              Email
               <div className="social-item">
-                <i className="icon icon-twitter-x"></i>
+                <i className="icon icon-envelope-solid"></i>
               </div>
             </a>
           </div>

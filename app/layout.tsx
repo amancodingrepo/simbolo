@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   title: "Simbolo - Growth-Driven Media & Marketing Agency",
   description: "Simbolo - Strategic media production, web design, and digital marketing services",
   icons: {
-    icon: "/assets/images/logo/favicon.svg",
-    apple: "/assets/images/logo/favicon.svg",
+    icon: "/assets/aman/logogo.png",
+    apple: "/assets/aman/logogo.png",
   },
 };
 
@@ -55,21 +55,21 @@ export default function RootLayout({
         <main id="wrapper">{children}</main>
 
         <Footer />
-
-        <Script src="/assets/js/jquery.min.js" strategy="beforeInteractive" />
-        <Script src="/assets/js/bootstrap.min.js" strategy="lazyOnload" />
-        <Script src="/assets/js/jquery.nice-select.min.js" strategy="lazyOnload" />
-        <Script src="/assets/js/swiper-bundle.min.js" strategy="lazyOnload" />
-        <Script src="/assets/js/slick.min.js" strategy="lazyOnload" />
-        <Script src="/assets/js/countto.js" strategy="lazyOnload" />
-        <Script src="/assets/js/carousel.js" strategy="lazyOnload" />
-        <Script src="/assets/js/infinityslide.js" strategy="lazyOnload" />
-        <Script src="/assets/js/ScrollSmooth.js" strategy="lazyOnload" />
-        <Script src="/assets/js/gsap.min.js" strategy="beforeInteractive" />
-        <Script src="/assets/js/ScrollTrigger.min.js" strategy="beforeInteractive" />
-        <Script src="/assets/js/ScrollToPlugin.min.js" strategy="lazyOnload" />
-        <Script src="/assets/js/gsapAnimation.js" strategy="lazyOnload" />
-        <Script src="/assets/js/main.js" strategy="lazyOnload" />
+        
+        <Script src="/assets/js/jquery.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/gsap.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/ScrollTrigger.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/bootstrap.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/jquery.nice-select.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/swiper-bundle.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/slick.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/countto.js" strategy="afterInteractive" />
+        <Script src="/assets/js/carousel.js" strategy="afterInteractive" />
+        <Script src="/assets/js/infinityslide.js" strategy="afterInteractive" />
+        <Script src="/assets/js/ScrollSmooth.js" strategy="afterInteractive" />
+        <Script src="/assets/js/ScrollToPlugin.min.js" strategy="afterInteractive" />
+        <Script src="/assets/js/gsapAnimation.js" strategy="afterInteractive" />
+        <Script src="/assets/js/main.js" strategy="afterInteractive" />
       </body>
     </html>
   );

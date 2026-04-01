@@ -1,17 +1,18 @@
-import PageTitleSection from '@/components/sections/PageTitleSection';
-import BlogSection from '@/components/sections/BlogSection';
+import PageTitleSection from "@/components/sections/PageTitleSection";
+import BlogSection from "@/components/sections/BlogSection";
 
-export default function Blog() {
+export default function BlogPage() {
   return (
     <>
       <PageTitleSection
-        title="Blog"
+        title="Our Blog"
+        backgroundImage="/assets/aman/hero.png"
         breadcrumbs={[
-          { label: 'Home', href: '/' },
-          { label: 'Blog' },
+          { label: "Home", href: "/" },
+          { label: "Blog", href: "/blog" },
         ]}
       />
-      <BlogSection layout="standard" showSidebar={true} />
+      <BlogSection layout="three-columns" showSidebar={false} />
     </>
   );
 }

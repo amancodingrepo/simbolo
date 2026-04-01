@@ -2,6 +2,7 @@ export default function ProcessSection() {
   return (
     <div className="section-process flat-spacing pt-0">
       <div className="container">
+        <div className="tf-btn-swiper-main">
         <div className="row">
           <div className="col-lg-5">
             <div className="process-heading h-100">
@@ -75,6 +76,7 @@ export default function ProcessSection() {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
