@@ -5,16 +5,9 @@ import Link from "next/link";
 export default function Header() {
   return (
     <header className="tf-header header2">
-      <div
-        className="header-inner"
-        style={{ maxWidth: "1100px", padding: "12px 12px 12px 40px" }}
-      >
+      <div className="header-inner simbolo-header-inner">
         <Link href="/" className="logo-site">
-          <img
-            src="/assets/aman/logo.png"
-            alt=""
-            style={{ height: "44px", width: "auto" }}
-          />
+          <img src="/assets/aman/logo.png" alt="" className="simbolo-header-logo" />
         </Link>
         <div className="box-navigation">
           <ul className="nav-menu-main">

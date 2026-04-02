@@ -18,7 +18,6 @@ export default async function BlogSingle({
 
   return (
     <>
-      {/* Hero */}
       <div className="section-hero v2" style={{ position: "relative" }}>
         <div
           className="hero-image"
@@ -50,7 +49,7 @@ export default async function BlogSingle({
               </div>
             </div>
             <p className="text effectFade fadeUp">{post.excerpt}</p>
-            {/* Cover image - positioned below text */}
+
             <div
               className="wrap-image mb-60 effectFade fadeZoom"
               style={{ marginTop: "40px" }}
@@ -67,16 +66,12 @@ export default async function BlogSingle({
               />
             </div>
 
-            {/* Meta */}
             <div className="d-flex gap-20 align-items-center mb-32 flex-wrap effectFade fadeUp">
               <span className="tags-item fw-semibold">{post.category}</span>
               <span className="text-secondary text-body-3">{post.date}</span>
-              <span className="text-secondary text-body-3">
-                {post.readTime}
-              </span>
+              <span className="text-secondary text-body-3">{post.readTime}</span>
             </div>
 
-            {/* Title */}
             <h2
               className="heading fw-semibold mb-32 effectFade fadeUp"
               style={{ color: "black" }}
@@ -84,10 +79,9 @@ export default async function BlogSingle({
               {post.title}
             </h2>
 
-            {/* Body */}
             <div
               className="text-secondary effectFade fadeUp"
-              style={{ lineHeight: "1.85", maxWidth: "full" }}
+              style={{ lineHeight: "1.85", maxWidth: "100%" }}
             >
               {post.body.split("\n\n").map((para, i) => (
                 <p key={i} style={{ marginBottom: "1.5rem" }}>
@@ -99,12 +93,10 @@ export default async function BlogSingle({
         </div>
       </div>
 
-      {/* Blog Single Body */}
       <div className="section-blog flat-spacing pt-0">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              {/* Author */}
               <div
                 className="d-flex align-items-center gap-16 mt-60 mb-60 effectFade fadeUp"
                 style={{
@@ -115,14 +107,13 @@ export default async function BlogSingle({
                 <div>
                   <div className="fw-semibold text-primary">{post.author}</div>
                   <div className="text-secondary text-body-3">
-                    {post.authorRole} · Simbolo
+                    {post.authorRole} - Simbolo
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Related Posts */}
           {otherPosts.length > 0 && (
             <div className="mt-60">
               <h3 className="heading fw-semibold mb-40 effectFade fadeUp">

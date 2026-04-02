@@ -18,10 +18,6 @@ export default function Contact() {
       <ContactSection
         headingSubtitle="Contact"
         headingTitle="Let's Build <br /> Intelligent Things"
-        contactInfo={[
-          { icon: 'icon-envelope-solid', title: 'E-mail address', value: 'hello@Simbolo.com' },
-          { icon: 'icon-headset-solid', title: 'Phone number', value: '+1 (647) 555 0172' },
-        ]}
       />
 
       <FAQsSection
