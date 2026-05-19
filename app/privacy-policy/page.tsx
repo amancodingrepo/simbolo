@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import PageTitleSection from "@/components/sections/PageTitleSection";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Simbolo",
@@ -10,15 +9,6 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <PageTitleSection
-        title="Privacy Policy"
-        backgroundImage="/assets/aman/hero.png"
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "Privacy Policy", href: "/privacy-policy" },
-        ]}
-      />
-
       <div className="box-white">
         <section className="section-privacy-policy flat-spacing">
           <div className="container">
