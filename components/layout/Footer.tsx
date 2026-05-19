@@ -96,6 +96,14 @@ export default function Footer() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link
+                href="/privacy-policy"
+                className="fw-semibold link-underline link1"
+              >
+                Privacy Policy
+              </Link>
+            </li>
           </ul>
           <p className="text-secondary coppy-rights text-center">
             Copyright 2026 Simbolo. All Rights Reserved.

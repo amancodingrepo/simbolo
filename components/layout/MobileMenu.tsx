@@ -8,6 +8,7 @@ const mobileLinks = [
   { href: "/work", label: "Works" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
 ];
 
 export default function MobileMenu() {
